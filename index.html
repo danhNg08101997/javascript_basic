@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Ôn tập ngày 1: JavaScript</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -154,6 +154,106 @@
           </div>
         </div>
         <hr />
+        <div class="vd5 mt-2">
+          <h3>
+            Ví dụ 2: Viết chương trình cho phép người dúng nhập vào 1 số => In
+            ra màn hình số chẵn hay số lẻ
+          </h3>
+          <div class="form-group">
+            <p>Nhập vào 1 số</p>
+            <input class="form-control w-25" id="iSo_2" />
+            <br />
+            <button id="btnKiemTraSo" class="btn btn-success">
+              Kiểm tra số
+            </button>
+          </div>
+          <div class="form-group">
+            <p id="ketQuaViDu2" class="alert alert-success mt-2"></p>
+          </div>
+        </div>
+        <hr />
+        <div class="vd6 mt-2">
+          <h3>
+            Ví dụ 3: Nhập vào điểm trung bình. Nếu lớn >=5 thì đậu ngược lại là
+            rớt
+          </h3>
+          <div class="form-group">
+            <p>Nhập điểm trung bình</p>
+            <input id="diemTB" class="form-control w-25" />
+            <br />
+            <button id="btnXepLoai" class="btn btn-success">Xếp loại</button>
+          </div>
+          <div class="form-group">
+            <p id="ketQuaXepLoai" class="alert alert-success mt-2"></p>
+          </div>
+        </div>
+        <hr />
+        <div class="vd7 mt-2">
+          <h3>
+            Ví dụ 4: Cho người dùng nhập vào 2 số. Tìm số lớn nhất và in ra kết
+            quả
+          </h3>
+          <div class="row">
+            <div class="col-4">
+              <div class="form-group">
+                <p>Nhập vào số thứ 1</p>
+                <input id="soThu1" class="form-control" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <p>Nhập số thứ 2</p>
+                <input id="soThu2" class="form-control" />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-group">
+                <p>&nbsp;</p>
+                <button id="btnTimSoLonNhat" class="btn btn-success">
+                  Tìm số lớn nhất
+                </button>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <p id="soLonNhat" class="alert alert-success mt-3"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="vd8 mt-2">
+          <h3>
+            Ví dụ 5: Viết chương trình cho phép người dùng nhập vào số giờ làm
+            và tiền công 1h. Yêu cầu: tính tiền công dựa trên số giờ làm theo
+            công thức sau
+          </h3>
+          <div class="alert alert-danger">
+            <p>Nếu giờ làm <= 40h: Tiền công = số giờ làm * tiền công 1h</p>
+            <p>
+              Nếu giờ làm > 40h: Tiền công = 40 * tiền công 1h + (số giờ OT -
+              40) * tiền công 1h * 1.5
+            </p>
+          </div>
+          <div class="form-group">
+            <p>Nhập vào số giờ làm/tuần</p>
+            <input id="soGioLamTrenTuan" class="form-control w-25" />
+          </div>
+          <div class="form-group mt-3">
+            <p>Tiền công 1h</p>
+            <input id="tienCong1h" class="form-control w-25" />
+          </div>
+          <div class="form-group mt-3">
+            <button id="btnTinhTienLuong" class="btn btn-outline-success">
+              Tính tiền lương
+            </button>
+          </div>
+          <div class="form-group mt-3">
+            <p class="alert alert-success" id="ketQuaVD5"></p>
+          </div>
+        </div>
+        <hr />
+        <div class="vd9 mt-2"></div>
       </div>
     </header>
     <!-- Bootstrap JavaScript Libraries -->

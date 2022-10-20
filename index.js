@@ -1,4 +1,3 @@
-
 // ---------------------------------Mô hình 3 khối-------------------------------------------
 
 /*
@@ -162,6 +161,7 @@ output:
 };
 
 /*-----------------------Cấu trúc rẻ nhánh trong lập trình----------------------------- */
+// ---Cấu trúc if
 
 document.getElementById("btnTinhTriTuyetDoi").onclick = function () {
   //input số: number
@@ -175,4 +175,72 @@ document.getElementById("btnTinhTriTuyetDoi").onclick = function () {
     ketQua = -iSo;
   }
   document.getElementById("ketQuaViDu1").innerHTML = ketQua;
+};
+
+// ----Cấu trúc if else
+//***Vd5:
+document.getElementById("btnKiemTraSo").onclick = function () {
+  //input: number
+  var iSo = document.getElementById("iSo_2").value;
+  //output: string
+  var ketQua = "";
+  //progress:
+  if (iSo % 2 === 0) {
+    ketQua = "Số chẵn";
+  } else {
+    ketQua = "Số lẻ";
+  }
+  //Hiển thị ra giao diện
+  document.getElementById("ketQuaViDu2").innerHTML = ketQua;
+};
+// ***Vd6
+document.getElementById("btnXepLoai").onclick = function () {
+  //input: number
+  var diemTB = document.getElementById("diemTB").value;
+  //output: string
+  var xepLoai = "";
+  //progress
+  if (Number(diemTB) >= 5) {
+    xepLoai = "Đậu";
+  } else {
+    xepLoai = "Rớt";
+  }
+  //Hiển thị ra giao diện
+  document.getElementById("ketQuaXepLoai").innerHTML = "Kết quả: " + xepLoai;
+};
+// ***Vd7
+document.getElementById("btnTimSoLonNhat").onclick = function () {
+  //sử dụng kĩ thuật đặt cờ
+  //input number
+  var soThu1 = Number(document.getElementById("soThu1").value);
+  var soThu2 = Number(document.getElementById("soThu2").value);
+
+  //progress
+  var max = soThu1;
+  if (max < soThu2) {
+    max = soThu2;
+  }
+  //output: number
+  var soLonNhat = max;
+  //Hiển thị ra giao diện
+  document.getElementById("soLonNhat").innerHTML = "Số lớn nhất: " + soLonNhat;
+};
+
+// ***Vd8
+document.getElementById("btnTinhTienLuong").onclick = function () {
+  //input: number
+  var soGioLamTrenTuan = Number(
+    document.getElementById("soGioLamTrenTuan").value
+  );
+  var tienCong1h = Number(document.getElementById("tienCong1h").value);
+  //output: number
+  var tienLuong = 0;
+  //progress
+  if (soGioLamTrenTuan <= 40) {
+    tienLuong = soGioLamTrenTuan * tienCong1h;
+  } else {
+    tienLuong = 40 * tienCong1h + (soGioLamTrenTuan - 40) * tienCong1h * 1.5;
+  }
+  //Hiển thị ra giao diện
+  document.getElementById("ketQuaVD5").innerHTML = "Tiền lương: " + tienLuong;
 };
