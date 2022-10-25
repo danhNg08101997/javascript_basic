@@ -411,7 +411,7 @@ document.getElementById("btnZoomOutTxt").onclick = function () {
 };
 /*------------------------------FUNCTION-------------------------------- */
 
-/*--------------------------------------VÒNG LẶP----------------------------------------
+/*-------------------------------VÒNG LẶP------------------------------------
 
   các yếu tố xác định bài toán lặp: logic lặp đi lặp lại 1 cách tự động thì đó là bài toán lặp
   B1: xác định yếu tố thay đổi (khởi tạo biến bước nhảy)
@@ -554,11 +554,46 @@ document.getElementById("btnVD17").onclick = function () {
   var ketQuaVd17 = "";
   //progress
   for (var index = 1; index <= soHang; index++) {
-    for (var i = 1; i <= soCot; i++) {
-      ketQuaVd17 = ketQuaVd17 + '<i class="fa fa-star"></i>';
-    }
-    ketQuaVd17 = ketQuaVd17 + '<br />'
+    var htmlHangSao = inSao(soCot);
+    ketQuaVd17 += htmlHangSao + "<br />";
   }
   document.getElementById("ketQuaVD17").innerHTML = ketQuaVd17;
 };
-//--------------------------------------VÒNG LẶP----------------------------------------
+
+//Cho phép người dùng nhập vào 1 số. In ra các số nguyên tó nhỏ hơn hoặc bằng số người dùng nhập
+document.getElementById("btnVD18").onclick = function () {
+  //input: number
+  var iSoVD18 = Number(document.getElementById("iSoVD18").value);
+  //output: string
+  var ketQuaVD18 = "";
+  for (var index = 2; index <= iSoVD18; index++) {
+    //phải kiểm tra index có phải là số nguyên tố hay không
+    var checkSNT = kiemTraSNT(index);
+    if (checkSNT) {
+      ketQuaVD18 += index + " ";
+    }
+  }
+  document.getElementById("ketQuaVD18").innerHTML = ketQuaVD18;
+};
+
+//------------------------------VÒNG LẶP-------------------------------------
+
+
+//------------------------------ARRAY-------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------ARRAY-------------------------------------
