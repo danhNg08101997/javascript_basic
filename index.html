@@ -8,6 +8,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link
@@ -253,9 +261,336 @@
           </div>
         </div>
         <hr />
-        <div class="vd9 mt-2"></div>
+        <div class="vd9 mt-2">
+          <h3>
+            Viết chương trình cho phép người dùng nhập vào điểm toán lý hóa. Yêu
+            cầu in ra điểm trung bình và xếp loại
+          </h3>
+          <div class="alert alert-danger">
+            <p>Trong đó xếp loại được tính theo điểm trung bình</p>
+            <p>Từ 0 đến < 5: không đạt</p>
+            <p>Từ >= 5 đến < 8: đạt</p>
+            <p>Từ >=8 đến 10: giỏi</p>
+          </div>
+          <div class="form-group row">
+            <div class="col-4">
+              <p>Điểm toán</p>
+              <input id="diemToan" class="form-control" />
+            </div>
+            <div class="col-4">
+              <p>Điểm lý</p>
+              <input id="diemLy" class="form-control" />
+            </div>
+            <div class="col-4">
+              <p>Điểm hóa</p>
+              <input id="diemHoa" class="form-control" />
+            </div>
+            <div class="form-group mt-3">
+              <button id="btnDiemTBMon" class="btn btn-outline-success">
+                Điểm trung bình
+              </button>
+            </div>
+            <div class="form-group mt-3">
+              <p id="ketQuaViDu9" class="alert alert-success"></p>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="vd10 mt-2">
+          <h3>Viết chương trình các số đọc từ 1 - 10</h3>
+          <div class="form-group">
+            <p>Nhập số</p>
+            <input id="iSoVD10" class="form-control w-25" />
+          </div>
+          <div class="form-group mt-2">
+            <button id="btnVD10" class="btn btn-outline-success">
+              Nhập số
+            </button>
+          </div>
+          <div class="form-group mt-2">
+            <p id="spanVD10" class="alert alert-success"></p>
+          </div>
+        </div>
+        <hr id="function" />
+        <div class="vdFuncion1 mt-2">
+          <h3>Viết hàm xuất thông tin lên giao diện</h3>
+          <p id="thongTin" class="alert-success alert"></p>
+          <section id="thongTin1" class="alert alert-danger"></section>
+          <article id="thongTin2" class="alert alert-warning"></article>
+        </div>
+        <hr />
+        <div class="vdFunction2 mt-2">
+          <h3>Viết chương trình tính điểm 2 khối thi đại học A, C</h3>
+          <div class="row mt-3">
+            <div class="col-4">
+              <span class="alert alert-danger">Khối A</span>
+              <div class="input-group mt-5">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-danger">Điểm Toán</button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="diemToan1"
+                  placeholder="Nhập điểm toán"
+                />
+              </div>
+              <div class="input-group mt-5">
+                <div class="input-group-preped">
+                  <button class="btn btn-outline-danger">Điểm Lý</button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="diemLy1"
+                  placeholder="Nhập điểm Lý"
+                />
+              </div>
+              <div class="input-group mt-5">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-danger">Điểm Hóa</button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="diemHoa1"
+                  placeholder="Nhập điểm Hóa"
+                />
+              </div>
+              <div class="input-group mt-5">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-danger">
+                    Điểm trung bình
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="diemTBKA1"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="offset-4 col-4">
+              <span class="alert alert-success">Khối C</span>
+              <div class="input-group mt-5">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-success">Điểm Văn</button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="diemVan1"
+                  placeholder="Nhập điểm Văn"
+                />
+              </div>
+              <div class="input-group mt-5">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-success">Điểm Sử</button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="diemSu1"
+                  placeholder="Nhập điểm Sử"
+                />
+              </div>
+              <div class="input-group mt-5">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-success">Điểm Địa</button>
+                </div>
+                <input
+                  type="text"
+                  id="diemDia1"
+                  placeholder="Nhập điểm Địa"
+                  class="form-control"
+                />
+              </div>
+              <div class="input-group mt-5">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-success">
+                    Điểm trung bình
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="diemTBKC1"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-2">
+            <button class="btn btn-warning" id="btnTinhDiem">Tính điểm</button>
+          </div>
+        </div>
+        <hr />
+        <div class="vdFunction3 mt-2">
+          <h3>
+            Bài tập 1: xây dựng chức năng zooin zoomout cho 2 button bên dưới
+          </h3>
+          <div>
+            <i
+              class="fa fa-house"
+              aria-hidden="true"
+              id="home"
+              style="font-size: 250px"
+            ></i>
+            <button class="btn btn-outline-warning" id="btnZoomInHome">
+              +
+            </button>
+            <button class="btn btn-outline-warning" id="btnZoomOutHome">
+              -
+            </button>
+          </div>
+          <hr />
+          <h3>
+            Bài tập 2: Xây dựng chức năng zoomin zoomout cho đoạn text bên dưới
+          </h3>
+          <div>
+            <p id="txtContent" style="font-size: 17px">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Excepturi, quis ab. Dolorum tempora cum quisquam recusandae
+              reiciendis maxime, quaerat temporibus nam eius aliquam quos
+              commodi enim, veniam rem quis! Esse labore laborum ipsa, mollitia
+              provident, praesentium similique laudantium beatae quod ullam
+              assumenda quasi est illo quaerat minima saepe nostrum sed
+              adipisci? Officiis ea, ratione enim voluptas aut numquam, a quod
+              dolore vitae eum molestias in aliquid pariatur modi atque illum
+              beatae suscipit amet fugiat unde distinctio tempore! Provident
+              quis odio consequatur et dolorem rerum nulla, beatae consectetur
+              esse quos a repellendus fugit voluptate, cum eveniet inventore
+              modi, exercitationem iusto harum.
+            </p>
+            <button class="btn btn-outline-info" id="btnZoomInTxt">+</button>
+            <button class="btn btn-outline-info" id="btnZoomOutTxt">-</button>
+          </div>
+        </div>
+        <hr id="vongLap" />
+        <div class="vd11 mt-2">
+          <h3>
+            Ví dụ 11: cho phép người dùng nhập vào số 1 bất kỳ. In ra số thẻ div
+            Hello cybersoft tương tự
+          </h3>
+          <div class="form-group">
+            <p>Nhập vào 1 số</p>
+            <input id="iSoVD11" class="form-control w-25" />
+            <button id="btnVD11" class="btn btn-success mt-2">
+              In thẻ div
+            </button>
+          </div>
+          <div id="ketQua11" class="mt-3"></div>
+        </div>
+        <hr />
+        <div class="vd12 mt-2">
+          <h3>Cho phép người dùng nhập vào 1 số tính giai thừa số đó</h3>
+          <div class="form-group">
+            <p>Nhập số</p>
+            <input id="iSoVD12" class="form-control mt-2 w-25" />
+            <button id="btnVD12" class="btn btn-success mt-2">Giai thừa</button>
+          </div>
+          <div id="ketQuaVD12" class="alert alert-success mt-2"></div>
+        </div>
+        <hr />
+        <div class="vd13 mt-2">
+          <h3>
+            Cho phép người dùng nhập vào 1 số tính tổng từ 1 -> n (số người dùng
+            nhập)
+          </h3>
+          <div class="alert alert-danger">
+            <p>Ví dụ: người dùng nhập vào số 7</p>
+            <p>Kết quả: 1 + 2 + 3 + 4 + 5 + 6 +7</p>
+          </div>
+          <div class="form-group mt-2">
+            <p>Nhập số</p>
+            <input id="iSoVD13" class="form-control w-25 mt-2" />
+            <button id="btnVD13" class="btn btn-success mt-2">Tổng</button>
+          </div>
+          <div id="ketQuaVD13" class="alert alert-danger mt-2"></div>
+        </div>
+        <hr />
+        <div class="vd14 mt-2">
+          <h3>
+            Cho phép người dùng nhập vào 1 số tính tổng từ 1 -> n. Tính tổng các
+            số chẵn
+          </h3>
+          <div class="alert alert-info">
+            <p>Ví dụ: Người dùng nhập vào số 10</p>
+            <p>Tổng số chẵn: 2 + 4 + 6 + 8 + 10</p>
+          </div>
+          <div class="form-group mt-2">
+            <p>Nhập số</p>
+            <input id="iSoVD14" class="form-control w-25 mt-2" />
+            <button id="btnVD14" class="btn btn-info mt-2">Tổng số chẵn</button>
+          </div>
+          <div id="ketQuaVD14" class="alert alert-info mt-2"></div>
+        </div>
+        <div class="vd15 mt-2">
+          <h3>
+            Cho phép người dùng nhập vào 1 số, cho biết số đó có phải là số
+            nguyên tố hay không
+          </h3>
+          <div class="alert alert-warning mt-2">
+            <p>Ví dụ: người dùng nhập vào số 5</p>
+            <p>Kết quả: 5 là số nguyên tố</p>
+          </div>
+          <div class="form-group mt-2">
+            <p>Nhập số</p>
+            <input id="iSoVD15" class="form-control w-25 mt-2" />
+            <button id="btnVD15" class="btn btn-warning mt-2">
+              Số nguyên tố
+            </button>
+          </div>
+          <div id="ketQuaVD15" class="alert alert-warning mt-2"></div>
+        </div>
+        <hr />
+        <div class="vd16 mt-2">
+          <h3>Viết chương trình nhập vào 1 số và in ra sô * tương ứng</h3>
+          <div class="alert alert-secondary">
+            <p>Ví dụ: người dùng nhập 5 kết quả: *****</p>
+          </div>
+          <div class="form-group mt-2">
+            <p>Nhập số</p>
+            <input id="iSoVD16" class="form-control w-25 mt-2" />
+            <button id="btnVD16" class="btn btn-secondary mt-2">
+              Ngôi sao
+            </button>
+          </div>
+          <div id="ketQuaVD16" class="alert alert-secondary mt-2"></div>
+        </div>
+        <hr />
+        <div class="vd17 mt-2">
+          <h3>
+            Viết chương trình cho phép người dùng nhập vào số hàng và số cột. In
+            ra các ngôi sao theo số liệu trên
+          </h3>
+          <div class="form-group mt-2">
+            <div class="row">
+              <div class="col-6">
+                <p>Nhập số hàng</p>
+                <input id="soHang" class="form-control mt-2" />
+              </div>
+              <div class="col-6">
+                <p>Nhập số cột</p>
+                <input id="soCot" class="form-control mt-2" />
+              </div>
+            </div>
+            <button id="btnVD17" class="btn btn-primary mt-2 align-center">
+              In ngôi sao
+            </button>
+            <div id="ketQuaVD17" class="alert alert-primary mt-2"></div>
+          </div>
+        </div>
       </div>
     </header>
+    <!-- (Optional) Use CSS or JS implementation -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -268,6 +603,7 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
-    <script src="./index.js"></script>
+    <script src="./js/common/method.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
